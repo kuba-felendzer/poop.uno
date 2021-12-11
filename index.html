@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="res/favicon.ico">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        // USAGE: loadArticle("hello.html");
+        // the path expands to "articles/hello.html", so simply write the filename, not the path
+        function loadArticle(article) {
+            pathtext = "articles/";
+            $("#article").load(pathtext.concat(article));
+        }
+    </script>
+    <title>Kuba Felendzer's Site</title>
+</head>
+<body>
+    <!-- Header -->
+    <div id="title">
+        Kuba Felendzer's Site
+        <div id="subtitle">
+            <a href="https://old.poop.uno">The Ancient Texts</a> - <a target="_blank" href="https://github.com/kuba-felendzer">GitHub</a>
+        </div>
+    </div>
+
+    <!-- Article Sidebar -->
+    <div id="sidebar">
+        <div id="sb-title">
+            Articles
+            <hr>
+        </div>
+        <div id="sb-subtitle">
+            My Projects
+        </div>
+        <div id="sb-list">
+            <ul>
+                <li onclick="loadArticle('projects/weatherman.html');">Weatherman</li>
+                <li>Test Item #2</li>
+                <li>Test Item #3</li>
+            </ul>
+        </div>
+        <div id="sb-subtitle">
+            My Music
+        </div>
+        <div id="sb-list">
+            <ul>
+                <li onclick="loadArticle('music/mar-22-2021.html');">Overture for Band</li>
+                <li>Test Item #5</li>
+                <li>Test Item #6</li>
+            </ul>
+        </div>
+        <div id="clickable" id="sb-subtitle">
+            <span onclick="loadArticle('contact.html');">Contact Me</span>
+        </div>
+    </div>
+
+    <!-- Central Aritcle View -->
+    <div id="article">
+        <h1>Hello!</h1>
+        <p>
+            Click on an article in the sidebar to show it here.<br />
+            The links up above will take you to external sites.
+            "The Ancient Texts" are old versions of the site, for anyone who is interested. These old versions aren't really maintained anymore so use at your own caution.
+            <!-- This is the default text which gets replaced when you click on something -->
+        </p>
+    </div>
+</body>
+</html>
