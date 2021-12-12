@@ -16,6 +16,8 @@ body {
     background-color: var(--bk-color);
     color: var(--txt-color);
     height: 100%;
+    width: 900px;
+    margin: 0 auto;
 }
 
 h4 {
