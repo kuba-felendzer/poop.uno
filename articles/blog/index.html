@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../res/favicon.ico">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        // USAGE: loadArticle("hello.html");
+        // the path expands to "articles/hello.html", so simply write the filename, not the path
+        function loadArticle(article) {
+            pathtext = "../../articles/";
+            $("#article").load(pathtext.concat(article));
+        }
+    </script>
+    <title>Kuba Felendzer's Blog</title>
+</head>
+<body>
+    <!-- Header -->
+    <div id="title">
+        <a style="color: var(--txt-color); text-decoration: none;" href="../../index.html">Kuba Felendzer's Blog</span>
+        <div id="subtitle">
+            <a href="https://old.poop.uno">The Ancient Texts</a> - <a target="_blank" href="https://github.com/kuba-felendzer">GitHub</a> - <a target="_blank" href="https://github.com/kuba-felendzer/poop.uno">Source</a>
+        </div>
+    </div>
+
+    <!-- Central Aritcle View -->
+    <div id="article">
+
+        <div id="post">
+            <div class="left" id="post-title">
+                <h1>I don't speak Polish</h1>
+                <div id="post-date">4-7-2022 12:34am</div>
+            </div>
+            <br/><br/><br/><br/><br/><br/>
+            <div id="post-content">
+                <p>I bought a book called "First Year Polish" off Amazon (hail to Bezos) because my Polish is lacking and I'm going to Poland later this year and I would not like to be a complete bumbling fool.  Turns out there's 7 cases for verbs and 5 genders, which is so much fun and not stupidly difficult. I am of the belief that Polish is not a natural language a twisted mind game handed down to humanity over a thousand years ago by an alien overlord who souhgt to destroy by giving us a language so complex that it would cause to expend so much trying to use we would shrivel up and die. This is why every Polish male is incredibly powerful and able to eat trains, because it is the greatest example of artificial selection at work (hail Bezos!).</p>
+            </div>
+        </div>
+
+        <!--
+
+        <hr>
+
+        <div id="post">
+            <div class="left" id="post-title">
+                <h1>This is a test post header</h1>
+                <div id="post-date">12-22-21</div>
+            </div>
+            <br/><br/><br/><br/><br/><br/>
+            <div id="post-content">
+                <p>This is some content for the post</p>
+            </div>
+        </div>
+        -->
+    </div>
+</body>
+</html>
