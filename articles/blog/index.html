@@ -9,16 +9,15 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
-        // USAGE: loadArticle("hello.html");
-        // the path expands to "articles/hello.html", so simply write the filename, not the path
-        function loadArticle(article) {
+        // turns all the misc json files in the posts/ directory into posts on the page
+        function genArticles(article) {
             pathtext = "../../articles/";
             $("#article").load(pathtext.concat(article));
         }
     </script>
     <title>Kuba Felendzer's Blog</title>
 </head>
-<body>
+<body onload="genArticles()">
     <!-- Header -->
     <div id="title">
         <a style="color: var(--txt-color); text-decoration: none;" href="../../index.html">Kuba Felendzer's Blog</span>
@@ -30,6 +29,47 @@
     <!-- Central Aritcle View -->
     <div id="article">
 
+        <!-- paste articles below this comment! -->
+        
+        <div id="post">
+            <div class="left" id="post-title">
+                <h1>Conlang tomfoolery ahead</h1>
+                <div id="post-date">4-10-22 2:42pm</div>
+            </div>
+            <br/><br/><br/><br/><br/><br/>
+            <div id="post-content">
+                <p><p>I've started working on a conlang in a notebook during school. I don't have a name for it yet, but I'll come up with something. Its vocabulary is inspired mostly by Polish and what little Spanish I know. I've got a writing system down in which you write consonants (k, v, b, g, etc.) as full characters and vowels (a, i, y, etc.) as diacritics above them. Words end up being mostly CVCVCVCV like in Japanese. As a consequence words cannot begin with vowels, which makes trying to co-opt vocab a fun challenge. Might post it all on GitHub later, idk.</p></p>
+            </div>
+        </div>
+        
+        <hr>
+
+        <div id="post">
+            <div class="left" id="post-title">
+                <h1>Fun new tool I call "Postwriter"</h1>
+                <div id="post-date">4-10-22 11:59am</div>
+            </div>
+            <br/><br/><br/><br/><br/><br/>
+            <div id="post-content">
+                <p>I've spent the last two hours writing a big fancy python script to replace a couple words in HTML for me. Basically I type the content of the post (meta) into a file called post.txt and then run the script, give it a date and a title and it'll spit out a file called like 0751098475091.html which I then manually copy-paste into index.html because I'm not good enough at programming to figure out how to insert text like that. I might put it on GitHub but <a href="https://poop.uno/blog/postwriter.py">here's a link to it</a> if you're interested.</p>
+            </div>
+        </div>
+        
+        <hr>
+
+        <div id="post">
+            <div class="left" id="post-title">
+                <h1>Writing is hard!</h1>
+                <div id="post-date">4-10-22 10:41am</div>
+            </div>
+            <br/><br/><br/><br/><br/><br/>
+            <div id="post-content">
+                <p>Writing is so difficult for me, not because I'm not good at coming up with the necessary words but because any form of emotional expression through language is impossible for me. I keep sitting down to write these short stories I have in mind and after two sentences they become too emotionally charged and I just can't bear to even think about it anymore! I don't know if it's some mental illness or just because men are conditioned to be emotionless husks in modern society but it's infuriating to simultaneously hate emotional expression and desperately need to perform it.</p>
+            </div>
+        </div>
+
+        <hr>
+        
         <div id="post">
             <div class="left" id="post-title">
                 <h1>I don't speak Polish</h1>
@@ -43,8 +83,6 @@
 
         <!--
 
-        <hr>
-
         <div id="post">
             <div class="left" id="post-title">
                 <h1>This is a test post header</h1>
@@ -55,7 +93,13 @@
                 <p>This is some content for the post</p>
             </div>
         </div>
+
+        <hr>
+        
+
         -->
     </div>
+
+    <br/><br/><br/>
 </body>
 </html>
